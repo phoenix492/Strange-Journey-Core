@@ -1,5 +1,6 @@
 package net.phoenix492.strangejourneycore.core;
 
+import net.phoenix492.strangejourneycore.item.SilphScopeItem;
 import net.phoenix492.strangejourneycore.registration.ModBlocks;
 import net.phoenix492.strangejourneycore.registration.ModEffects;
 import net.phoenix492.strangejourneycore.registration.ModItems;
@@ -29,6 +30,9 @@ public class StrangeJourneyCore {
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModEffects.register(modEventBus);
+
+        // Event Listening
+        SilphScopeItem.registerSpawnListener();
 
         // Configs
         // modContainer.registerConfig(ModConfig.Type.COMMON, StrangeJourneyCore.COMMON_SPEC);
