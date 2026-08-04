@@ -29,6 +29,18 @@ sourceSets.main.resources {
 
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
+    // Add here additional repositories if required by some of the dependencies below.
+    maven { url 'https://maven.wispforest.io/releases' }
+    maven { url 'https://maven.su5ed.dev/releases' }
+    maven { url 'https://maven.fabricmc.net' }
+    maven { url = "https://api.modrinth.com/maven" }
+    maven { url = "https://maven.impactdev.net/repository/development"}
+    maven { url = 'https://maven.blamejared.com'}
+    maven {
+        name = 'Kotlin for Forge'
+        url = 'https://thedarkcolour.github.io/KotlinForForge/'
+    }
+    mavenCentral()
 }
 
 base {
@@ -137,6 +149,11 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    implementation("io.wispforest:accessories-neoforge:${project.accessories_version}")
+    implementation("com.cobblemon:neoforge:1.7.3+1.21.1")
+    implementation("thedarkcolour:kotlinforforge-neoforge:5.10.0")
+    compileOnly("vazkii.patchouli:Patchouli:1.21.1-93-NEOFORGE:api")
+    runtimeOnly("vazkii.patchouli:Patchouli:1.21.1-93-NEOFORGE")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -152,7 +169,8 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_license            : mod_license,
             mod_version            : mod_version,
             mod_authors            : mod_authors,
-            mod_description        : mod_description
+            mod_description        : mod_description,
+            accessories_version    : accessories_version
     ]
     inputs.properties replaceProperties
     expand replaceProperties
