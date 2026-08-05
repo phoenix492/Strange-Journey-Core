@@ -23,7 +23,9 @@ public class ModItems {
 
     public static DeferredItem<SilphScopeItem> SILPH_SCOPE = MOD_ITEMS.register(
         "silph_scope",
-        () -> new SilphScopeItem(new Item.Properties())
+        () -> new SilphScopeItem(new Item.Properties()
+            .stacksTo(1)
+        )
     );
 
     public static void register(IEventBus eventBus) {
