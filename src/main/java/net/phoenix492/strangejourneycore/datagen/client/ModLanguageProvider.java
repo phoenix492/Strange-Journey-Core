@@ -16,5 +16,6 @@ public class ModLanguageProvider extends LanguageProvider {
         add(ModItems.ROCKY_CLUMP.asItem(), "Rocky Clump");
         add(ModItems.WOODEN_PANEL.asItem(), "Wooden Panel");
         add(ModItems.SILPH_SCOPE.asItem(), "Silph Scope");
+        add("creativetab.strangejourneycore.strangejourneycore_creative_tab", "Strange Journey Core");
     }
 }
