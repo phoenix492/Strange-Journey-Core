@@ -6,7 +6,9 @@
   },
   "package": "net.phoenix492.strangejourneycore.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "ShutUpEnderIoMixin"
+  ],
   "client": [],
   "server": [],
   "injectors": {

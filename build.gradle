@@ -160,6 +160,7 @@ dependencies {
     implementation("com.cobblemon:neoforge:1.7.3+1.21.1")
     implementation("thedarkcolour:kotlinforforge-neoforge:5.10.0")
     implementation("curse.maven:dimensionaldoors-284876:8347493")
+    implementation("curse.maven:ender-io-64578:8192838")
     compileOnly("vazkii.patchouli:Patchouli:1.21.1-93-NEOFORGE:api")
     runtimeOnly("vazkii.patchouli:Patchouli:1.21.1-93-NEOFORGE")
 }
